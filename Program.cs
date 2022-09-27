@@ -21,16 +21,17 @@ namespace Onlinerestaurang
             Console.WriteLine("Welcome to " + Admin.RestaurantName());
             Console.WriteLine("Type 'C' if you are a customer, A if you are Admin");
             string input1 = Console.ReadLine();
-
-            while (input1 != "c" && input1 != "C" && input1 != "a" && input1 != "A")
+            while (input1 != "c" && input1 != "a")
             {
                 Console.WriteLine("wrong input, try agin");
                 input1 = Console.ReadLine();
-
-                if (input1 == "c" || input1 == "C")
+            }
+            while (input1 == "c" || input1 == "a")
+            {
+                if (input1 == "c")
                 {
                     Console.WriteLine("Here is the menu for today:\n" + menu1.ShowMenu() + "\n" + menu2.ShowMenu() + "\n" + menu3.ShowMenu());
-                    Console.WriteLine("Chose menu: ");
+                    Console.WriteLine("Choose menu: ");
                     string chooseMenu = Console.ReadLine();
                     while (chooseMenu != "a" && chooseMenu != "b" && chooseMenu != "c")
                     {
@@ -57,16 +58,15 @@ namespace Onlinerestaurang
                         Console.WriteLine("you added menu " + menu3.GetFoodType() + "to the cart");
                         break;
                     }
+
+
                 }
-                /*if (input1 == "A" || input1 == "a")
+                if (input1 == "a")
                 {
                     Console.WriteLine("Hello Admin");
+                    break;
+
                 }
-                else if
-                {
-                    Console.WriteLine("wrong input");
-                }
-                Console.ReadLine();*/
             }
             Console.WriteLine("Please login and proceed to payment");
             Console.WriteLine("Username: ");
