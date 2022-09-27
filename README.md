@@ -1,3 +1,3 @@
 # onlineRestaurang
 onlineRestaurang
-this is my first oop project
+This is my first oop project in C#.
