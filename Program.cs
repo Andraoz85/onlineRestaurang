@@ -26,87 +26,93 @@ namespace Onlinerestaurang
             {
                 Console.WriteLine("wrong input, try agin");
                 input1 = Console.ReadLine();
-            }
-            if (input1 == "c" || input1 == "C")
-            {
-                Console.WriteLine("Here is the menu for today:\n" + menu1.ShowMenu() + "\n" + menu2.ShowMenu() + "\n" + menu3.ShowMenu());
-                Console.WriteLine("Chose menu: ");
-                string chooseMenu = Console.ReadLine();
-                while (chooseMenu != "a" && chooseMenu != "b" && chooseMenu != "c")
-                {
-                    Console.WriteLine("wrong input, try agin");
-                    chooseMenu = Console.ReadLine();
-                }
-                if (chooseMenu == "a")
-                {
-                    cart.addToCart(menu1.GetFoodType(), menu1.GetFoodPrice());
-                    Console.WriteLine("you added menu " + menu1.GetFoodType() + "to the cart");
 
-                }
-                else if (chooseMenu == "b")
+                if (input1 == "c" || input1 == "C")
                 {
-                    cart.addToCart(menu2.GetFoodType(), menu2.GetFoodPrice());
-                    Console.WriteLine("you added menu " + menu2.GetFoodType() + "to the cart");
-
-                }
-                else
-                {
-                    cart.addToCart(menu3.GetFoodType(), menu3.GetFoodPrice());
-                    Console.WriteLine("you added menu " + menu3.GetFoodType() + "to the cart");
-                }
-
-                Console.WriteLine("Please login and proceed to payment");
-                Console.WriteLine("Username: ");
-                string userName = Console.ReadLine();
-                while (userName != "David" && userName != "Andy" && userName != "Anders")
-                {
-                    Console.WriteLine("Wrong Username. Please try again :");
-                    userName = Console.ReadLine();
-                }
-                while (userName == "David" || userName == "Andy" || userName == "Anders")
-                {
-                    Console.WriteLine("Password: ");
-                    string userPass = Console.ReadLine();
-
-
-                    if (userName == "David" && userPass == "David")
+                    Console.WriteLine("Here is the menu for today:\n" + menu1.ShowMenu() + "\n" + menu2.ShowMenu() + "\n" + menu3.ShowMenu());
+                    Console.WriteLine("Chose menu: ");
+                    string chooseMenu = Console.ReadLine();
+                    while (chooseMenu != "a" && chooseMenu != "b" && chooseMenu != "c")
                     {
-                        Console.WriteLine("Hello " + David.ShowInfo());
-                        break;
+                        Console.WriteLine("wrong input, try agin");
+                        chooseMenu = Console.ReadLine();
                     }
-                    else if (userName == "Andy" && userPass == "Andy")
+                    if (chooseMenu == "a")
                     {
-                        Console.WriteLine("Hello " + Andy.ShowInfo());
+                        cart.addToCart(menu1.GetFoodType(), menu1.GetFoodPrice());
+                        Console.WriteLine("you added menu " + menu1.GetFoodType() + "to the cart");
                         break;
+
                     }
-                    else if (userName == "Anders" && userPass == "Anders")
+                    else if (chooseMenu == "b")
                     {
-                        Console.WriteLine("Hello " + Anders.ShowInfo());
+                        cart.addToCart(menu2.GetFoodType(), menu2.GetFoodPrice());
+                        Console.WriteLine("you added menu " + menu2.GetFoodType() + "to the cart");
                         break;
+
                     }
                     else
                     {
-                        Console.WriteLine("You typed in wrong password, please try again");
+                        cart.addToCart(menu3.GetFoodType(), menu3.GetFoodPrice());
+                        Console.WriteLine("you added menu " + menu3.GetFoodType() + "to the cart");
+                        break;
                     }
+                }
+                /*if (input1 == "A" || input1 == "a")
+                {
+                    Console.WriteLine("Hello Admin");
+                }
+                else if
+                {
+                    Console.WriteLine("wrong input");
+                }
+                Console.ReadLine();*/
+            }
+            Console.WriteLine("Please login and proceed to payment");
+            Console.WriteLine("Username: ");
+            string userName = Console.ReadLine();
+            while (userName != "David" && userName != "Andy" && userName != "Anders")
+            {
+                Console.WriteLine("Wrong Username. Please try again :");
+                userName = Console.ReadLine();
+            }
+            while (userName == "David" || userName == "Andy" || userName == "Anders")
+            {
+                Console.WriteLine("Password: ");
+                string userPass = Console.ReadLine();
 
 
+                if (userName == "David" && userPass == "David")
+                {
+                    Console.WriteLine("Hello " + David.ShowInfo());
+                    break;
+                }
+                else if (userName == "Andy" && userPass == "Andy")
+                {
+                    Console.WriteLine("Hello " + Andy.ShowInfo());
+                    break;
+                }
+                else if (userName == "Anders" && userPass == "Anders")
+                {
+                    Console.WriteLine("Hello " + Anders.ShowInfo());
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("You typed in wrong password, please try again");
                 }
 
 
             }
-            else if (input1 == "A" || input1 == "a")
-            {
-                Console.WriteLine("Hello Admin");
-            }
-            else
-            {
-                Console.WriteLine("wrong input");
-            }
+
             Console.ReadLine();
+
         }
 
-
     }
+
+
 }
+
 
 
