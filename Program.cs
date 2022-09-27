@@ -63,36 +63,33 @@ namespace Onlinerestaurang
                     Console.WriteLine("Wrong Username. Please try again :");
                     userName = Console.ReadLine();
                 }
-                if (userName == "David" || userName == "Andy" || userName == "Anders")
+                while (userName == "David" || userName == "Andy" || userName == "Anders")
                 {
                     Console.WriteLine("Password: ");
                     string userPass = Console.ReadLine();
-                    while (userPass != "David" && userPass != "Andy" && userPass != "Anders")
-                    {
-                        Console.WriteLine("Wrong Password. Please try again");
-                        userPass = Console.ReadLine();
-                    }
+
+
                     if (userName == "David" && userPass == "David")
                     {
                         Console.WriteLine("Hello " + David.ShowInfo());
-                        Console.ReadLine();
+                        break;
                     }
                     else if (userName == "Andy" && userPass == "Andy")
                     {
                         Console.WriteLine("Hello " + Andy.ShowInfo());
-                        Console.ReadLine();
+                        break;
                     }
                     else if (userName == "Anders" && userPass == "Anders")
                     {
                         Console.WriteLine("Hello " + Anders.ShowInfo());
-                        Console.ReadLine();
+                        break;
                     }
                     else
                     {
-                        Console.WriteLine("You typed in wrong password");
-                        userPass = Console.ReadLine();
+                        Console.WriteLine("You typed in wrong password, please try again");
                     }
-                    Console.ReadLine();
+
+
                 }
 
 
