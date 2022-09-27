@@ -54,6 +54,48 @@ namespace Onlinerestaurang
                     cart.addToCart(menu3.GetFoodType(), menu3.GetFoodPrice());
                     Console.WriteLine("you added menu " + menu3.GetFoodType() + "to the cart");
                 }
+
+                Console.WriteLine("Please login and proceed to payment");
+                Console.WriteLine("Username: ");
+                string userName = Console.ReadLine();
+                while (userName != "David" && userName != "Andy" && userName != "Anders")
+                {
+                    Console.WriteLine("Wrong Username. Please try again :");
+                    userName = Console.ReadLine();
+                }
+                if (userName == "David" || userName == "Andy" || userName == "Anders")
+                {
+                    Console.WriteLine("Password: ");
+                    string userPass = Console.ReadLine();
+                    while (userPass != "David" && userPass != "Andy" && userPass != "Anders")
+                    {
+                        Console.WriteLine("Wrong Password. Please try again");
+                        userPass = Console.ReadLine();
+                    }
+                    if (userName == "David" && userPass == "David")
+                    {
+                        Console.WriteLine("Hello " + David.ShowInfo());
+                        Console.ReadLine();
+                    }
+                    else if (userName == "Andy" && userPass == "Andy")
+                    {
+                        Console.WriteLine("Hello " + Andy.ShowInfo());
+                        Console.ReadLine();
+                    }
+                    else if (userName == "Anders" && userPass == "Anders")
+                    {
+                        Console.WriteLine("Hello " + Anders.ShowInfo());
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("You typed in wrong password");
+                        userPass = Console.ReadLine();
+                    }
+                    Console.ReadLine();
+                }
+
+
             }
             else if (input1 == "A" || input1 == "a")
             {

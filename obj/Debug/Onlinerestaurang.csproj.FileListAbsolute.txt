@@ -5,3 +5,10 @@ C:\Users\motal\source\repos\Onlinerestaurang\bin\Debug\Onlinerestaurang.exe
 C:\Users\motal\source\repos\Onlinerestaurang\bin\Debug\Onlinerestaurang.pdb
 C:\Users\motal\source\repos\Onlinerestaurang\obj\Debug\Onlinerestaurang.exe
 C:\Users\motal\source\repos\Onlinerestaurang\obj\Debug\Onlinerestaurang.pdb
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\bin\Debug\Onlinerestaurang.exe
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\bin\Debug\Onlinerestaurang.pdb
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\obj\Debug\Onlinerestaurang.csproj.AssemblyReference.cache
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\obj\Debug\Onlinerestaurang.csproj.SuggestedBindingRedirects.cache
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\obj\Debug\Onlinerestaurang.csproj.CoreCompileInputs.cache
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\obj\Debug\Onlinerestaurang.exe
+C:\Users\motal\OneDrive - Handelsakademin\Skrivbordet\git-repo\onlineRestaurang\obj\Debug\Onlinerestaurang.pdb

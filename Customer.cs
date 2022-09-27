@@ -17,11 +17,15 @@ namespace Onlinerestaurang
             this.eMail = eMail;
         }
 
+
+        public string ShowInfo()
+        {
+            return $"{customerName}\n {customerAdress}\n {phoneNumber}\n {eMail}";
+        }
         public void AddoCart(string meal)
         {
             Console.WriteLine("You added " + meal);
         }
-
 
     }
 
