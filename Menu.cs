@@ -12,8 +12,6 @@
             this.foodPrice = foodPrice;
         }
 
-        public string FoodType { get; set; }
-        public int FoodPrice { get; set; }
         public string GetfoodType()
         {
             return foodType;

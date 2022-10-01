@@ -11,10 +11,19 @@
             this.foodPrice = foodPrice;
         }
 
-        public void addToCart(string foodType, int foodPrice)
+
+        public object AddToCart()
         {
-            this.foodType = foodType;
-            this.foodPrice = foodPrice;
+            return foodType + foodPrice;
+        }
+
+        public string AddFood()
+        {
+            return foodType;
+        }
+        public int AddPrice()
+        {
+            return foodPrice;
         }
     }
 }
