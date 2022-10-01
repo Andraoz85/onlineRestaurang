@@ -16,13 +16,5 @@
             this.foodType = foodType;
             this.foodPrice = foodPrice;
         }
-
-        public void ProceedToPayment()
-        {
-
-        }
-
-
-
     }
 }

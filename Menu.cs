@@ -12,27 +12,18 @@
             this.foodPrice = foodPrice;
         }
 
-        public void UpdateFoodType()
-        {
-
-        }
-
-        public void UpdatePrice()
-        {
-
-        }
-        public string ShowMenu()
-        {
-            return foodType + foodPrice;
-        }
-        public string GetFoodType()
+        public string FoodType { get; set; }
+        public int FoodPrice { get; set; }
+        public string GetfoodType()
         {
             return foodType;
         }
-        public int GetFoodPrice()
+        public int GetfoodPrice()
         {
             return foodPrice;
         }
+
+
     }
 }
 

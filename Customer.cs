@@ -6,25 +6,21 @@ namespace Onlinerestaurang
     {
         private string customerName;
         private string customerAdress;
-        private string phoneNumber;
-        private string eMail;
 
-        public Customer(string customerName, string customerAdress, string phoneNumber, string eMail)
+        public Customer(string customerName, string customerAdress)
         {
             this.customerName = customerName;
             this.customerAdress = customerAdress;
-            this.phoneNumber = phoneNumber;
-            this.eMail = eMail;
         }
 
 
         public string ShowInfo()
         {
-            return $"{customerName}\n {customerAdress}\n {phoneNumber}\n {eMail}";
+            return $"{customerName}\n {customerAdress}";
         }
-        public void AddoCart(string meal)
+        public void AddToCart(string meal)
         {
-            Console.WriteLine("You added " + meal);
+            Console.WriteLine("You added {0} to the cart", meal);
         }
 
     }
