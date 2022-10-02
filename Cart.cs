@@ -1,29 +1,26 @@
-﻿namespace Onlinerestaurang
+﻿using System;
+using System.Collections.Generic;
+
+namespace Onlinerestaurang
 {
-    class Cart
+    class Cart : Menu
     {
-        private string foodType;
-        private int foodPrice;
+        private int totalPrice;
 
-        public Cart(string foodType, int foodPrice)
+        public List<Menu> cartList = new List<Menu>();
+
+        public Cart(string foodType, int foodPrice, int totalPrice)
+                    : base(foodType, foodPrice)
         {
-            this.foodType = foodType;
-            this.foodPrice = foodPrice;
+            this.totalPrice = totalPrice;
         }
 
 
-        public object AddToCart()
+        public void AddToCart(Menu menu)
         {
-            return foodType + foodPrice;
+            cartList.Add(menu);
+            Console.WriteLine("You ordered: \t " + menu.GetfoodType() + menu.GetfoodPrice());
         }
 
-        public string AddFood()
-        {
-            return foodType;
-        }
-        public int AddPrice()
-        {
-            return foodPrice;
-        }
     }
 }

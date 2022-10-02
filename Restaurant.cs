@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace Onlinerestaurang
 {
@@ -7,7 +8,7 @@ namespace Onlinerestaurang
     {
 
         Menu[] foodMenu = new Menu[4];
-        Cart[] cart = new Cart[4];
+        Cart cart = new Cart("", 0, 0);
 
         public Restaurant()
         {
@@ -15,50 +16,37 @@ namespace Onlinerestaurang
             Menu menus2 = new Menu("Hamburgertallrik med dricka \t Pris: ", 99);
             Menu menus3 = new Menu("Kebabtallrik med dricka  \t Pris: ", 119);
 
-            Cart cart1 = new Cart("", 0);
-            Cart cart2 = new Cart("", 0);
-            Cart cart3 = new Cart("", 0);
-
-            cart[1] = cart1;
-            cart[2] = cart2;
-            cart[3] = cart3;
-
             foodMenu[1] = menus1;
             foodMenu[2] = menus2;
             foodMenu[3] = menus3;
         }
 
-
-        public void Greetings()
+        public void RunOperations()
         {
+            Console.WriteLine("Welcome to pizzeria Rimini. Please make a choice:");
+            Console.WriteLine("1: View Menu");
+            Console.WriteLine("2: Exit");
             bool quit = false;
-
             while (quit == false)
             {
-                Console.WriteLine("Welcome to pizzeria Rimini. Please make a choice:");
-                Console.WriteLine("1: View Menu");
-                Console.WriteLine("2: Exit");
                 string input = Console.ReadLine();
-
-
-
                 if (input == "1")
                 {
                     ShowMenu();
                     ChooseMenu();
+                    DisplayOutro();
                     break;
                 }
-                else if (input != "2")
+                else if (input == "2")
                 {
-                    Console.WriteLine("wrong input, try again");
+                    DisplayOutro();
+                    quit = true;
                 }
                 else
                 {
-                    quit = true;
-                    Console.WriteLine("Thanks for stopping by!");
+                    Console.WriteLine("wrong input, try again");
                 }
             }
-
         }
 
         public void ShowMenu()
@@ -78,21 +66,21 @@ namespace Onlinerestaurang
             bool quit = false;
             while (quit == false)
             {
-                string makeChoice = Console.ReadLine();
+                string makeChoice = ReadLine();
                 if (makeChoice == "1")
                 {
-                    Console.WriteLine("you added menu 1 to the cart");
+                    cart.AddToCart(foodMenu[1]);
                     quit = true;
                 }
                 else if (makeChoice == "2")
                 {
-                    Console.WriteLine("you added menu 2 to the cart");
+                    cart.AddToCart(foodMenu[2]);
                     quit = true;
                 }
                 else if (makeChoice == "3")
                 {
-                    Console.WriteLine("you added menu nr 3 to the cart");
-                    quit = !true;
+                    cart.AddToCart(foodMenu[3]);
+                    quit = true;
                 }
                 else
                 {
@@ -100,10 +88,11 @@ namespace Onlinerestaurang
                 }
             }
         }
-
-
+        public void DisplayOutro()
+        {
+            Console.WriteLine("Thanks for stopping by!");
+            ReadKey();
+        }
     }
-
-
 }
 

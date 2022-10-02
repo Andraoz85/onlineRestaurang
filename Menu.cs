@@ -2,7 +2,7 @@
 {
     class Menu
     {
-        private string foodType;
+        public string foodType;
         private int foodPrice;
 
 

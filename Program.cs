@@ -6,12 +6,8 @@ namespace Onlinerestaurang
     {
         static void Main(string[] args)
         {
-
-            Restaurant napoli = new Restaurant();
-
-            napoli.Greetings();
-
-
+            Restaurant myRestaurant = new Restaurant();
+            myRestaurant.RunOperations();
             Console.ReadLine();
         }
 
